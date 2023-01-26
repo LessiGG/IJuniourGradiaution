@@ -1,16 +1,16 @@
-using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Coins
 {
-    public class CoinManager : MonoBehaviour
+    public class CoinsHolder : MonoBehaviour
     {
-        [SerializeField] private TextMeshProUGUI _text;
-    
-        public int CoinsCount { get; private set; }
-
+        public event UnityAction OnCoinsChanged;
+        
         private Progress _progress;
 
+        public int CoinsCount { get; private set; }
+        
         private void Awake()
         {
             _progress = FindObjectOfType<Progress>();
@@ -19,19 +19,19 @@ namespace Coins
         private void Start()
         {
             CoinsCount = _progress.Coins;
-            UpdateCoinsUI();
+            InvokeCoinsChange();
         }
 
         public void ReduceMoneyCount(int price)
         {
             CoinsCount -= price;
-            UpdateCoinsUI();
+            InvokeCoinsChange();
         }
 
         public void AddCoin()
         {
             CoinsCount++;
-            UpdateCoinsUI();
+            InvokeCoinsChange();
         }
 
         public void SaveProgress()
@@ -39,9 +39,9 @@ namespace Coins
             _progress.SetCoinsCount(CoinsCount);
         }
 
-        private void UpdateCoinsUI()
+        private void InvokeCoinsChange()
         {
-            _text.text = CoinsCount.ToString();
+            OnCoinsChanged?.Invoke();
         }
     }
 }

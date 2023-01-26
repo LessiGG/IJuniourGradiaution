@@ -1,24 +1,16 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 namespace Gates
 {
-    public class GatePair : MonoBehaviour
+    [RequireComponent(typeof(GatesHolder))]
+    public class GateDestroyer : MonoBehaviour
     {
-        private readonly List<Gate> _gates = new List<Gate>();
-
-        private void GetGates()
-        {
-            foreach (Transform child in transform)
-            {
-                var gate = child.GetComponent<Gate>();
-                _gates.Add(gate);
-            }
-        }
+        private List<Gate> _gates;
         
         private void OnEnable()
         {
-            GetGates();
+            _gates = GetComponent<GatesHolder>().GetGates();
             
             foreach (var gate in _gates)
                 gate.GatePassed += OnGatePassed;
@@ -29,7 +21,7 @@ namespace Gates
             foreach (var gate in _gates)
                 gate.GatePassed -= OnGatePassed;
         }
-
+        
         private void OnGatePassed()
         {
             foreach (var gate in _gates)

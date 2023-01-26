@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d048aef647571c647903eb943148cf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _coinManager: {fileID: 6146533929840913956}
+  _coinsHolder: {fileID: 6146533929840913956}
   _price: 20
   _heightIncreaseValue: 25
   _widthIncreaseValue: 25
@@ -703,19 +703,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1454137411}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1426509989}
-        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: MoveToNextLevel
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1426509989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -728,7 +716,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5b80913b0ea4c05a6f31bd4ac1fb6d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _coinManager: {fileID: 6146533929840913956}
+  _coinsHolder: {fileID: 6146533929840913956}
 --- !u!1 &1460612766
 GameObject:
   m_ObjectHideFlags: 0
@@ -1240,8 +1228,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6146533929840913959}
   - component: {fileID: 6146533929840913956}
+  - component: {fileID: 101571045}
   m_Layer: 0
-  m_Name: CoinManager
+  m_Name: CoinsHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1272,6 +1261,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fa7bec24563e6d4580f662b048d2f92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &101571045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6146533929840913958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2f57d155b3d4986acabd75a0869a60c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _text: {fileID: 6146533929974983096}
@@ -1929,19 +1930,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6146533930759864899}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1829711863}
-        m_TargetAssemblyTypeName: GameStart, Assembly-CSharp
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1829711863
 MonoBehaviour:
   m_ObjectHideFlags: 0

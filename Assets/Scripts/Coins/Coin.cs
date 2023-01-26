@@ -6,13 +6,13 @@ namespace Coins
     public class Coin : MonoBehaviour
     {
         [SerializeField] private float _rotationSpeed;
-        [SerializeField] private GameObject _coinParticle;
-    
-        private CoinManager _coinManager;
+        [SerializeField] private ParticleSystem _coinParticle;
+        
+        private CoinsHolder _coinsHolder;
 
         private void Start()
         {
-            _coinManager = FindObjectOfType<CoinManager>();
+            _coinsHolder = FindObjectOfType<CoinsHolder>();
         }
 
         private void Update()
@@ -22,9 +22,9 @@ namespace Coins
 
         private void OnTriggerEnter(Collider other)
         {
-            _coinManager.AddCoin();
+            _coinsHolder.AddCoin();
             Destroy(gameObject);
-            SpawnUtils.Spawn(_coinParticle, transform.position);
+            SpawnUtils.SpawnParticle(_coinParticle.gameObject, transform.position);
         }
     }
 }

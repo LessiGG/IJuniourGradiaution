@@ -4,7 +4,7 @@ using Utils;
 
 public class Barrier : MonoBehaviour
 {
-    [SerializeField] private GameObject _bricksParticles;
+    [SerializeField] private ParticleSystem _bricksParticles;
     
     private void OnTriggerEnter(Collider other)
     {
@@ -14,7 +14,7 @@ public class Barrier : MonoBehaviour
         {
             playerModifier.HitBarrier();
             Destroy(gameObject);
-            SpawnUtils.Spawn(_bricksParticles, transform.position);
+            SpawnUtils.SpawnParticle(_bricksParticles.gameObject, transform.position);
         }
     }
 }

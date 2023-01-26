@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Shop : MonoBehaviour
 {
-    [SerializeField] private CoinManager _coinManager;
+    [SerializeField] private CoinsHolder _coinsHolder;
     [SerializeField] private int _price = 20;
     [SerializeField] private int _heightIncreaseValue = 25;
     [SerializeField] private int _widthIncreaseValue = 25;
@@ -40,9 +40,9 @@ public class Shop : MonoBehaviour
 
     private void Buy()
     {
-        _coinManager.ReduceMoneyCount(_price);
-        _progress.SetCoinsCount(_coinManager.CoinsCount);
+        _coinsHolder.ReduceMoneyCount(_price);
+        _progress.SetCoinsCount(_coinsHolder.CoinsCount);
     }
     
-    private bool HaveEnoughMoney => _coinManager.CoinsCount >= _price;
+    private bool HaveEnoughMoney => _coinsHolder.CoinsCount >= _price;
 }

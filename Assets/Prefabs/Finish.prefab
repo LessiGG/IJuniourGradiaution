@@ -2778,7 +2778,7 @@ PrefabInstance:
         type: 3}
       propertyPath: _bricksParticles
       value: 
-      objectReference: {fileID: 6755424474745332389, guid: ce1839c698a3a4444bb2e6dfe9257e23,
+      objectReference: {fileID: 6755424474745332391, guid: ce1839c698a3a4444bb2e6dfe9257e23,
         type: 3}
     - target: {fileID: 5192220735139968359, guid: a897ed44bb0ce9241b8df17fe09e1044,
         type: 3}

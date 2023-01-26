@@ -6,7 +6,7 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Button))]
 public class FinishGameWindow : MonoBehaviour
 {
-    [SerializeField] private CoinManager _coinManager;
+    [SerializeField] private CoinsHolder _coinsHolder;
     
     private Button _nextLevelButton;
 
@@ -32,7 +32,7 @@ public class FinishGameWindow : MonoBehaviour
 
         if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
         {
-            _coinManager.SaveProgress();
+            _coinsHolder.SaveProgress();
             SceneManager.LoadScene(nextSceneIndex);
         }
     } 

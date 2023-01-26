@@ -110,5 +110,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8e611827ad9476ba2e6cc5e70017ae3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bricksParticles: {fileID: 6755424474745332389, guid: ce1839c698a3a4444bb2e6dfe9257e23,
+  _bricksParticles: {fileID: 6755424474745332391, guid: ce1839c698a3a4444bb2e6dfe9257e23,
     type: 3}
