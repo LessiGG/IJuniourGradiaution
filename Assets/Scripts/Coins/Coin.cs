@@ -7,14 +7,8 @@ namespace Coins
     {
         [SerializeField] private float _rotationSpeed;
         [SerializeField] private ParticleSystem _coinParticle;
+        [SerializeField] private CoinsHolder _coinsHolder;
         
-        private CoinsHolder _coinsHolder;
-
-        private void Start()
-        {
-            _coinsHolder = FindObjectOfType<CoinsHolder>();
-        }
-
         private void Update()
         {
             transform.Rotate(0, _rotationSpeed * Time.deltaTime, 0);

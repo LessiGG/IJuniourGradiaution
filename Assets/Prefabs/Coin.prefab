@@ -49,6 +49,7 @@ MonoBehaviour:
   _rotationSpeed: 360
   _coinParticle: {fileID: 198927480420149238, guid: b395d5d6eb4b4b846acc021ee036b744,
     type: 3}
+  _coinsHolder: {fileID: 0}
 --- !u!135 &5892061657930313618
 SphereCollider:
   m_ObjectHideFlags: 0
