@@ -8,9 +8,9 @@ namespace Coins
         public event UnityAction OnCoinsChanged;
         
         private Progress _progress;
-
-        public int CoinsCount { get; private set; }
         
+        public int CoinsCount { get; private set; }
+
         private void Awake()
         {
             _progress = FindObjectOfType<Progress>();

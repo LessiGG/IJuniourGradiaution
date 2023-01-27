@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class WindowManager : MonoBehaviour
+public class WindowDisplayer : MonoBehaviour
 {
     [SerializeField] private GameObject _startWindow;
     [SerializeField] private GameObject _finishWindow;

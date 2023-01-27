@@ -13,6 +13,7 @@ namespace Player
 
         [SerializeField] private Renderer _renderer;
         [SerializeField] private SoundPlayer _soundPlayer;
+        [SerializeField] private WindowDisplayer _windowDisplayer;
     
         [SerializeField] private Transform _topSpine;
         [SerializeField] private Transform _bottomSpine;
@@ -103,7 +104,7 @@ namespace Player
         private void Die()
         {
             Destroy(gameObject);
-            FindObjectOfType<WindowManager>().ShowFinishWindow();
+            _windowDisplayer.ShowFinishWindow();
         }
 
         private void PlayPumpSound()

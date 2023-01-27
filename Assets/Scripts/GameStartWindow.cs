@@ -8,6 +8,9 @@ using UnityEngine.UI;
 public class GameStartWindow : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _levelText;
+    [SerializeField] private WindowDisplayer _windowDisplayer;
+
+    [SerializeField] private PlayerBehaviour _playerBehaviour;
     
     private Button _playButton;
 
@@ -34,7 +37,7 @@ public class GameStartWindow : MonoBehaviour
 
     private void Play()
     {
-        FindObjectOfType<WindowManager>().HideStartWindow();
-        FindObjectOfType<PlayerBehaviour>().EnableInput();
+        _windowDisplayer.HideStartWindow();
+        _playerBehaviour.EnableInput();
     }
 }

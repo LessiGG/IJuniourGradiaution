@@ -13,7 +13,7 @@ namespace Utils
             if (container == null)
                 container = new GameObject(containerName);
             
-            GameObject.Instantiate(particle, position, Quaternion.identity, container.transform);
+            Object.Instantiate(particle, position, Quaternion.identity, container.transform);
         }
     }
 }

@@ -7,6 +7,7 @@ namespace Finish
     public class FinishTrigger : MonoBehaviour
     {
         [SerializeField] private SoundPlayer _soundPlayer;
+        [SerializeField] private WindowDisplayer _windowDisplayer;
         
         private void OnTriggerEnter(Collider other)
         {
@@ -15,7 +16,7 @@ namespace Finish
             if (playerBehaviour != null)
             {
                 playerBehaviour.StartFinishBehabiour();
-                FindObjectOfType<WindowManager>().ShowFinishWindow();
+                _windowDisplayer.ShowFinishWindow();
             }
         
             _soundPlayer.Play();

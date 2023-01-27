@@ -9,12 +9,12 @@ public class Shop : MonoBehaviour
     [SerializeField] private int _heightIncreaseValue = 25;
     [SerializeField] private int _widthIncreaseValue = 25;
 
-    private PlayerModifier _playerModifier;
+    [SerializeField] private PlayerModifier _playerModifier;
+    
     private Progress _progress;
 
     private void Start()
     {
-        _playerModifier = FindObjectOfType<PlayerModifier>();
         _progress = FindObjectOfType<Progress>();
     }
 

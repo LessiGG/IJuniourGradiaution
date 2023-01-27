@@ -5003,6 +5003,7 @@ MonoBehaviour:
   _widthDecreaseValue: 50
   _renderer: {fileID: 386887991480633601}
   _soundPlayer: {fileID: 1925605646}
+  _windowDisplayer: {fileID: 0}
   _topSpine: {fileID: 9171074789196375926}
   _bottomSpine: {fileID: 7171271592766067779}
   _colliderTransform: {fileID: 1440940737151712254}
