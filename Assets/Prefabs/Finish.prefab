@@ -318,6 +318,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _soundPlayer: {fileID: 94154987}
+  _windowDisplayer: {fileID: 0}
 --- !u!114 &94154987
 MonoBehaviour:
   m_ObjectHideFlags: 0

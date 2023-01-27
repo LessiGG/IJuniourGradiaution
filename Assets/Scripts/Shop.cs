@@ -4,18 +4,19 @@ using UnityEngine;
 
 public class Shop : MonoBehaviour
 {
-    [SerializeField] private CoinsHolder _coinsHolder;
     [SerializeField] private int _price = 20;
     [SerializeField] private int _heightIncreaseValue = 25;
     [SerializeField] private int _widthIncreaseValue = 25;
 
-    [SerializeField] private PlayerModifier _playerModifier;
-    
+    private PlayerModifier _playerModifier;
+    private CoinsHolder _coinsHolder;
     private Progress _progress;
 
     private void Start()
     {
         _progress = FindObjectOfType<Progress>();
+        _playerModifier = FindObjectOfType<PlayerModifier>();
+        _coinsHolder = FindObjectOfType<CoinsHolder>();
     }
 
     public void BuyWidth()

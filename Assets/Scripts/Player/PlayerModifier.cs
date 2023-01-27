@@ -13,7 +13,6 @@ namespace Player
 
         [SerializeField] private Renderer _renderer;
         [SerializeField] private SoundPlayer _soundPlayer;
-        [SerializeField] private WindowDisplayer _windowDisplayer;
     
         [SerializeField] private Transform _topSpine;
         [SerializeField] private Transform _bottomSpine;
@@ -21,6 +20,7 @@ namespace Player
         [SerializeField] private Transform _colliderTransform;
 
         private Progress _progress;
+        private WindowDisplayer _windowDisplayer;
     
         private static readonly int PushValue = Shader.PropertyToID("_PushValue");
 
@@ -33,6 +33,7 @@ namespace Player
         private void Awake()
         {
             _progress = FindObjectOfType<Progress>();
+            _windowDisplayer = FindObjectOfType<WindowDisplayer>();
         }
 
         private void Start()

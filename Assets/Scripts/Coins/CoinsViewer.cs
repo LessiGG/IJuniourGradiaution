@@ -3,7 +3,6 @@ using UnityEngine;
 
 namespace Coins
 {
-    [RequireComponent(typeof(CoinsHolder))]
     public class CoinsViewer : MonoBehaviour
     {
         [SerializeField] private TextMeshProUGUI _text;
@@ -12,7 +11,7 @@ namespace Coins
 
         private void OnEnable()
         {
-            _coinsHolder = GetComponent<CoinsHolder>();
+            _coinsHolder = FindObjectOfType<CoinsHolder>();
             _coinsHolder.OnCoinsChanged += UpdateCoinsUI;
         }
 

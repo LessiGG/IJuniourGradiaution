@@ -6,12 +6,12 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Button))]
 public class FinishGameWindow : MonoBehaviour
 {
-    [SerializeField] private CoinsHolder _coinsHolder;
-    
+    private CoinsHolder _coinsHolder;
     private Button _nextLevelButton;
 
     private void OnEnable()
     {
+        _coinsHolder = FindObjectOfType<CoinsHolder>();
         _nextLevelButton = GetComponent<Button>();
         _nextLevelButton.onClick.AddListener(OnButtonClick);
     }

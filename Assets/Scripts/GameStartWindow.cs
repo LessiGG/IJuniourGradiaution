@@ -9,14 +9,14 @@ public class GameStartWindow : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _levelText;
     [SerializeField] private WindowDisplayer _windowDisplayer;
-
-    [SerializeField] private PlayerBehaviour _playerBehaviour;
     
+    private PlayerBehaviour _playerBehaviour;
     private Button _playButton;
 
     private void OnEnable()
     {
         _playButton = GetComponent<Button>();
+        _playerBehaviour = FindObjectOfType<PlayerBehaviour>();
         _playButton.onClick.AddListener(OnButtonClick);
     }
 

@@ -7,8 +7,14 @@ namespace Finish
     public class FinishTrigger : MonoBehaviour
     {
         [SerializeField] private SoundPlayer _soundPlayer;
-        [SerializeField] private WindowDisplayer _windowDisplayer;
         
+        private WindowDisplayer _windowDisplayer;
+
+        private void Start()
+        {
+            _windowDisplayer = FindObjectOfType<WindowDisplayer>();
+        }
+
         private void OnTriggerEnter(Collider other)
         {
             PlayerBehaviour playerBehaviour = other.attachedRigidbody.GetComponent<PlayerBehaviour>();
